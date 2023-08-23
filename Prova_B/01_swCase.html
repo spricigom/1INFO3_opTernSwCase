@@ -10,10 +10,22 @@
     */
 
     //Entrada
-
-
+    const curso = prompt(`Informe o curso que está matriculado: TI, TA ou TQ`).toUpperCase().trim();
     //Processamento
-
+    switch (curso) {
+        case "TI":
+            alert("Técnico em Informática!")
+            break;
+        case "TA":
+            alert("Técnico em Agropecuária")
+            break;
+        case "TQ":
+            alert("Técnico em Química")
+            break;
+        default:
+            alert("Valor inválido")
+            break;
+    }
 
     //Saída
 

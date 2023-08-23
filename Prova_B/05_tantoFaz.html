@@ -13,13 +13,25 @@
     */
 
     //Entrada
-
-
+    const bebida = prompt(`Informe o tipo de beiba que deseja; RF (refrigerante), AS (Água Sem Gás ), AC (Água Com Gás) ou SN (Suco Natural)`).trim().toUpperCase();
+    const quant = Number(prompt(`Informe a quantidade de bebida que deseja comprar`));
     //Processamento
+    let custo = 0;
+    (bebida == "RF")? custo = quant * 4.50 
+        : (bebida == "AS")? custo = quant * 2.90
+            :(bebida == "AC")? custo = quant * 3
+                : custo = quant * 3.90;
+
+    let mensagem= "";
+        (custo <= 150)? mensagem = `Você pagará R$${custo.toFixed(2)}`
+            : mensagem = `Você pagará R$${((custo * 10/100) + custo).toFixed(2)}`;
+
+
+
 
 
     //Saída
-
+    alert(mensagem);
 /*
 Para testar:
 Entradas: Quantidade de bebida (número) e Tipo da Bebida (RF, AS, AC ou SN)

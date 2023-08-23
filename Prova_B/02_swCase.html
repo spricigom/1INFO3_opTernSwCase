@@ -12,10 +12,22 @@
     */
 
     //Entrada
-
-    
+    const tipo = prompt(`Informe o tipo de combustível que deseja: EN (etanol), GL (gasolina) ou OD (óleo disel).`).toUpperCase().trim();
     //Processamento
-
+    switch (tipo) {
+        case "EN":
+            alert(`Preço do litro de Etanol: R$5,49`);
+            break;
+        case "GL":
+            alert(`Preço da litro de Gasolina:R$ 6,19`);
+            break;
+        case "OD":
+            alert(`Preço do litro de Óleo Diesel: R$ 5,29`);
+            break;
+        default:
+            alert(`Mensagem inválida`);
+            break;
+    }
 
     //Saída
 

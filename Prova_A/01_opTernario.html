@@ -12,10 +12,15 @@
     */
 
     //Entrada
-
+    const km = Number(prompt(`Informe a distância total percorrida pelo entregador`));
 
     //Processamento
+    let mensagem = "";
 
+    (km <= 50)? mensagem = `O custo será de R$${(km * 1).toFixed(2).replace(",", ".")}`
+        :(km <= 100)? mensagem = `O custo será de R$${(km * 1.25).toFixed(2).replace(",", ".")}`
+            : (km > 100)? mensagem = `O custo será de R$${(km * 1.50).toFixed(2).replace(",", ".")}`
+               : mensagem = "Valor inválido"; 
     
     //Saída
 

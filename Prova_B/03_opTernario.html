@@ -11,13 +11,18 @@
     */
 
     //Entrada
-
+    const preco = Number(prompt(`Informe o preço do celular`).replace(",","."));
+    const meses = Number(prompt(`Informe o meses deseja pagar o celulas (quantas parcelas)`));
 
     //Processamento
-
+    let mensagem = "";
+     (meses == 1)? mensagem = `O valor final é R$${preco.toFixed(2)}`
+        : (meses <= 5)? mensagem = `O valor final é R$${((preco * 8/100) + preco).toFixed(2)}`
+            : (meses > 5)? mensagem = `O valor final é R$${((preco * 12/100) + preco).toFixed(2)}`
+                : mensagem = "Valor inválido";
 
     //Saída
-
+    alert(mensagem);
 
 /*
 Para testar:

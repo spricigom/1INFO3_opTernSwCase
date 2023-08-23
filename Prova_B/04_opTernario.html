@@ -12,13 +12,17 @@
     */
 
     //Entrada
-
+    const km = Number(prompt(`Informe a distância da pizzaria que desjeja realizar o pedido`))
 
     //Processamento
+    let mensagem = "";
 
-    
+    (km <= 10)? mensagem = `O custo será de R$${(km * 2).toFixed(2)}`
+        :(km <= 15)? mensagem = `O custo será de R$${(km * 2.20).toFixed(2)}`
+            : (km > 15)? mensagem = `O custo será de R$${(km * 2.30).toFixed(2)}`
+               : mensagem = "Valor inválido"; 
     //Saída
-
+    alert(mensagem);
 /*
 Para testar:
 Entrada: Km (distância de entrega)
